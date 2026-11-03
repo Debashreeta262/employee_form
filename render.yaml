@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: debashreeta262-employee-form
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: DB_NAME
+        value: employee_db
